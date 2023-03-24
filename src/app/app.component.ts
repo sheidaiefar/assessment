@@ -11,5 +11,4 @@ export class AppComponent {
     { name: 'B', job: 'E' },
     { name: 'C', job: 'E' },
   ];
-  item = Object.assign(this.data[0]);
 }

@@ -1,23 +1,8 @@
-<!-- <repeater [options]="data">
-  <template>
-    <div>{{ item.name }}</div>
-  </template>
-</repeater> -->
-
-<!-- <repeater [options]="data">
-  <ng-template let-option>
-    {{ option.name }}
-  </ng-template>
-</repeater> -->
-
-<app-repeat [options]="data">
+<app-repeat>
   <ng-template appRepeat *ngFor="let option of data">
     {{ option.name }}
+    <div>*</div>
   </ng-template>
 </app-repeat>
 
-<!-- <app-repeat>
-  <ng-container ngProjectAs="[appRepeat]">
-    <p>Is content projection cool?</p>
-  </ng-container>
-</app-repeat> -->
+===========================================
