@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RepeaterComponent } from './repeater/repeater.component';
 import { TemplateDirective } from './repeater/directives/template.directive';
+import { RepeatComponent } from './repeat/repeat.component';
+import { RepeatDirective } from './repeat/repeat.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     RepeaterComponent,
-    TemplateDirective
+    TemplateDirective,
+    RepeatComponent,
+    RepeatDirective
   ],
   imports: [
     BrowserModule,
