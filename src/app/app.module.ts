@@ -4,12 +4,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RepeatComponent } from './components/repeat/repeat.component';
 import { RepeatDirective } from './components/repeat/repeat.directive';
+import { SorterPipe } from './pipes/sorter.pipe';
+import { SortPipe } from './pipes/sort.pipe';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,  
     RepeatComponent,
-    RepeatDirective
+    RepeatDirective,
+    SorterPipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,

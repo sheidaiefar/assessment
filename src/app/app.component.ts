@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { SorterPipe } from './pipes/sorter.pipe';
+import * as _ from 'lodash';
+
 
 @Component({
   selector: 'app-root',
@@ -12,21 +15,27 @@ export class AppComponent {
     { name: 'C', job: 'E' },
   ];
 
-  sortingData = [
+  movies = [
     {
-      name: 'malihe',
-      age: 22,
-      birthDate: new Date(29, 1, 2000),
+      name: 'A',
+      rate: 5,
+      release: new Date(29, 1, 2000),
     },
     {
-      name: 'anna',
-      age: 72,
-      birthDate: new Date(29, 1, 1930),
+      name: 'B',
+      rate: 1,
+      release: new Date(29, 1, 2022),
     },
     {
-      name: 'tida',
-      age: 2,
-      birthDate: new Date(29, 1, 2020),
+      name: 'C',
+      rate: 3,
+      release: new Date(29, 1, 2000),
     },
   ];
+
+
+  constructor(private sortPipe: SorterPipe) {}
+
+
+  sortedArr = this.sortPipe.transform(this.movies, "desc", "name");
 }
