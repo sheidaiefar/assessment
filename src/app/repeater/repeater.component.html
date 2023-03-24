@@ -1,7 +1,13 @@
-<div >
-  <!-- <ng-template > -->
-    <!-- <ng-content select="template"></ng-content> -->
-    <ng-content *ngFor="let i of options"></ng-content>
-  <!-- </ng-template> -->
+<!-- <div *ngFor="let item of options">
+  <ng-content select="template"></ng-content>
+  <ng-content #content></ng-content>
+</div> -->
 
-</div>
+<!-- <ng-container *ngFor="let item of options">
+      <ng-container *ngTemplateOutlet="item" >
+      </ng-container>
+    </ng-container> -->
+
+    <div *ngFor="let item of options" class="children">
+      <ng-container *ngTemplateOutlet="templateRef; context: {$implicit: item}"></ng-container>
+    </div>

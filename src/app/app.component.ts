@@ -11,11 +11,5 @@ export class AppComponent {
     { name: 'B', job: 'E' },
     { name: 'C', job: 'E' },
   ];
-
-  keys = Object.keys(this.data[0]);
-  obj = Object.assign(this.data[0])
-
-  constructor() {
-    console.log(this.obj);
-  }
+  item = Object.assign(this.data[0]);
 }

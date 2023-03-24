@@ -1,8 +1,11 @@
-<repeater [options]="data">
-  <!-- <div>{{item.name}}</div> -->
-  <!-- <template>
+<!-- <repeater [options]="data">
+  <template>
     <div>{{ item.name }}</div>
-    <p>hi</p>
-  </template> -->
-  <div>{{ obj.name }}</div>
+  </template>
+</repeater> -->
+
+<repeater [options]="data">
+  <ng-template let-option>
+    {{ option.name }}
+  </ng-template>
 </repeater>
