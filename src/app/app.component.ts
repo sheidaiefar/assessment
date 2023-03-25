@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SorterPipe } from './pipes/sorter.pipe';
-import * as _ from 'lodash';
-
 
 @Component({
   selector: 'app-root',
@@ -19,7 +16,7 @@ export class AppComponent {
     {
       name: 'A',
       rate: 5,
-      release: new Date(29, 1, 2000),
+      release: new Date(1, 1, 2000),
     },
     {
       name: 'B',
@@ -29,13 +26,11 @@ export class AppComponent {
     {
       name: 'C',
       rate: 3,
-      release: new Date(29, 1, 2000),
+      release: new Date(13, 5, 2015),
     },
   ];
 
 
-  constructor(private sortPipe: SorterPipe) {}
+  constructor() {}
 
-
-  sortedArr = this.sortPipe.transform(this.movies, "desc", "name");
 }
