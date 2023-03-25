@@ -6,8 +6,7 @@
 </app-repeat>
 
 ===========================================
-<!-- <div *ngFor="let movie of movies | sorter:'asc':'name'">{{ movie | json }}</div> -->
 
-<div *ngFor="let item of movies | sort:[]">
+<div *ngFor="let item of movies | sort:'-rate'">
   {{item.name }} -- {{item.rate}}  --  {{item.release}} 
 </div>

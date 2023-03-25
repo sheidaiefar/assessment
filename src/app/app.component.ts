@@ -14,7 +14,7 @@ export class AppComponent {
 
   movies = [
     {
-      name: 'A',
+      name: 'M',
       rate: 5,
       release: new Date(1, 1, 2000),
     },
