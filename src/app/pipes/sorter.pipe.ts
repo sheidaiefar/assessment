@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-export type SortOrder = 'asc' | 'desc';
+export type Order = 'asc' | 'desc';
 
 @Pipe({
   name: 'sorter',
@@ -8,12 +8,12 @@ export type SortOrder = 'asc' | 'desc';
 export class SorterPipe implements PipeTransform {
   transform(
     value: any[],
-    sortOrder: SortOrder | string = 'asc',
+    order: Order | string = 'asc',
     sortKey?: string
   ): any {
-    sortOrder = sortOrder && (sortOrder.toLowerCase() as any);
+    order = order && (order.toLowerCase() as any);
 
-    if (!value || (sortOrder !== 'asc' && sortOrder !== 'desc')) return value;
+    if (!value || (order !== 'asc' && order !== 'desc')) return value;
 
     let numberArray = [];
     let stringArray = [];
@@ -34,6 +34,6 @@ export class SorterPipe implements PipeTransform {
         });
     }
     const sorted = numberArray.concat(stringArray);
-    return sortOrder === 'asc' ? sorted : sorted.reverse();
+    return order === 'asc' ? sorted : sorted.reverse();
   }
 }

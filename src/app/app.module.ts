@@ -6,6 +6,7 @@ import { RepeatComponent } from './components/repeat/repeat.component';
 import { RepeatDirective } from './components/repeat/repeat.directive';
 import { SorterPipe } from './pipes/sorter.pipe';
 import { SortPipe } from './pipes/sort.pipe';
+import { SortingPipe } from './pipes/sorting.pipe';
 
 
 
@@ -15,7 +16,8 @@ import { SortPipe } from './pipes/sort.pipe';
     RepeatComponent,
     RepeatDirective,
     SorterPipe,
-    SortPipe
+    SortPipe,
+    SortingPipe
   ],
   imports: [
     BrowserModule,

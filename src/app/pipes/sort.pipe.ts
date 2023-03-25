@@ -1,5 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { orderBy } from 'lodash';
+
+
+export type order = 'asc' | 'desc' | string ;
 
 @Pipe({
   name: 'sort'
@@ -13,7 +15,8 @@ export class SortPipe implements PipeTransform {
       if(order==='asc'){return value.sort()}
       else{return value.sort().reverse();}
     } // sort 1d array
-    return orderBy(value, [column], [order]);
+    // return orderBy(value, [column], [order]);
+    return []
   }
 
 }
