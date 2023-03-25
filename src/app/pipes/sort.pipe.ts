@@ -5,7 +5,7 @@ export class OrderByModel {
   public column!: string;
 }
 
-function Detector(param: string): OrderByModel {
+function OrderBy(param: string): OrderByModel {
   let orderBy = new OrderByModel();
   var splitted = param.split('-', 2);
   if (splitted.length == 2) {
@@ -41,12 +41,16 @@ function CheckDataType(data: any[]) {
   return dataType;
 }
 
+
+
 function SortArray(data: any[], param: string): any[] {
   if (!data) {
     return [];
   }
 
-  let orderBy = Detector(param as string);
+  let orderBy = OrderBy(param as string);
+  let dataType = CheckDataType(data);
+
 
   return [];
 }
@@ -56,9 +60,7 @@ function SortArray(data: any[], param: string): any[] {
 })
 export class SortPipe implements PipeTransform {
   transform(value: any[], params: string[] | string): any[] {
-    console.log('data:', typeof value[0]);
-    console.log('value', CheckDataType(value));
-
+  
     if (!value || params === '' || !params || params.length == 0) {
       return value;
     } // no array
@@ -68,7 +70,7 @@ export class SortPipe implements PipeTransform {
     } // array with only one item
 
     if (typeof params === 'string') {
-      let orderBy = Detector(params as string);
+      let orderBy = OrderBy(params as string);
       if (orderBy.order == 'desc') {
         return value.sort().reverse();
       } else {
