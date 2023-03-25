@@ -30,7 +30,9 @@ export class AppComponent {
     },
   ];
 
+  names = ['maria', 'anna', 'sara'];
 
+  dates = [new Date(29, 1, 2022),new Date(29, 1, 2000)];
+  
   constructor() {}
-
 }
