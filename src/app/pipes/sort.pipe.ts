@@ -86,20 +86,24 @@ function SortArray(data: any[], param: string): any[] {
       break;
 
     case 'object':
-      sortedData = data.sort((n1, n2) => {
-        if (n1.col > n2.col) {
-          return 1;
+      let dataKeys = Object.keys(data[0]);      
+      dataKeys.forEach((objectCol) => {
+        if (objectCol == col) {
+          sortedData = data.sort((n1, n2) => {            
+            if (n1[col] > n2[col]) {
+              return 1;
+            }
+            if (n1[col] < n2[col]) {
+              return -1;
+            }
+            return 0;
+          });
         }
-
-        if (n1.col < n2.col) {
-          return -1;
-        }
-
-        return 0;
       });
       break;
 
     default:
+      sortedData = data.sort();
       break;
   }
 
