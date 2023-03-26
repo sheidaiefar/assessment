@@ -81,7 +81,7 @@ function SortArray(data: any[], param: string): any[] {
     case 'date':
       sortedData = data.sort(
         (a: any, b: any) =>
-          new Date(a.col).getTime() - new Date(b.col).getTime()
+          new Date(a[col]).getTime() - new Date(b[col]).getTime()
       );
       break;
 

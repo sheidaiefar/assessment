@@ -27,7 +27,7 @@ export class AssessmentsComponent {
 
   names = ['maria', 'anna', 'sara'];
 
-  dates = [new Date(29, 1, 2022), new Date(29, 1, 2000), new Date(29, 1, 1900)];
+  dates = [new Date(25, 5, 2022), new Date(29, 1, 2000), new Date(29, 12, 1900)];
 
   ages = [100, 20, 44, 88];
 
