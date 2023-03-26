@@ -1,0 +1,92 @@
+<div>
+  <mat-accordion>
+    <mat-expansion-panel hideToggle class="panel">
+      <mat-expansion-panel-header>
+        <mat-panel-title> 1- Create a sorting pipe </mat-panel-title>
+        <mat-panel-description>
+          <p>
+            sorting criteria can be either string or Array <br />
+            use “-” to specify if the sorting should be ascending or descending
+            <br />
+            consider all primitive types, objects, arrays and dates
+          </p>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p></p>
+    </mat-expansion-panel>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> examples </mat-panel-title>
+        <mat-panel-description> </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <p>sort an object array of : name,rate,date; by ('-rate') :</p>
+      <div *ngFor="let item of movies | sort : '-rate'">
+        {{ item.name }} -- {{ item.rate }} -- {{ item.release }}
+      </div>
+
+      <br/>
+      <mat-divider></mat-divider>
+
+      <p>sort an array of names; by ('-name') :</p>
+      <div *ngFor="let item of names | sort : '-name'">
+        {{ item }}
+      </div>
+
+      <br/>
+      <mat-divider></mat-divider>
+
+      <p>sort an array of ages; by ('age') :</p>
+      <div *ngFor="let item of ages | sort : 'age'">
+        {{ item }}
+      </div>
+
+      <br/>
+      <mat-divider></mat-divider>
+
+      <p>sort an array of dates; by ('-dates') :</p>
+      <div *ngFor="let item of dates | sort : 'dates'">
+        {{ item }}
+      </div>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+
+<hr>
+
+  <mat-accordion>
+    <mat-expansion-panel hideToggle class="panel">
+      <mat-expansion-panel-header>
+        <mat-panel-title> 2- Create a repeater component </mat-panel-title>
+        <mat-panel-description>
+          <p>
+            Create a repeater component which repeats everything within the
+            enclosing tags as many times as there are elements in the input array. The
+            repeated template has access to the current object, exposed as “item”.            
+          </p>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p></p>
+    </mat-expansion-panel>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> examples </mat-panel-title>
+        <mat-panel-description> </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <app-repeat>
+        <ng-template appRepeat *ngFor="let option of data">
+          {{ option.name }}
+          <div>*</div>
+        </ng-template>
+      </app-repeat>
+      
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

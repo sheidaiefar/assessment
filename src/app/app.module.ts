@@ -2,22 +2,17 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RepeatComponent } from './components/repeat/repeat.component';
-import { RepeatDirective } from './components/repeat/repeat.directive';
-import { SortPipe } from './pipes/sort.pipe';
-
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 
 @NgModule({
   declarations: [
     AppComponent,  
-    RepeatComponent,
-    RepeatDirective,
-    SortPipe,    
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
