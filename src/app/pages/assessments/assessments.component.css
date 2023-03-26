@@ -2,7 +2,14 @@
   margin-left: 8px;
 }
 
+.panel {
+  background-color: aqua;
+}
 
-.panel{
-    background-color: aqua;
+.card {
+  border: 2px solid aqua;
+}
+
+.card-header {
+  background-color: aqua;
 }

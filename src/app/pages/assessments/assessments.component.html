@@ -28,7 +28,7 @@
         {{ item.name }} -- {{ item.rate }} -- {{ item.release }}
       </div>
 
-      <br/>
+      <br />
       <mat-divider></mat-divider>
 
       <p>sort an array of names; by ('-name') :</p>
@@ -36,7 +36,7 @@
         {{ item }}
       </div>
 
-      <br/>
+      <br />
       <mat-divider></mat-divider>
 
       <p>sort an array of ages; by ('age') :</p>
@@ -44,18 +44,17 @@
         {{ item }}
       </div>
 
-      <br/>
+      <br />
       <mat-divider></mat-divider>
 
       <p>sort an array of dates; by ('date') :</p>
       <div *ngFor="let item of dates | sort : 'date'">
         {{ item }}
       </div>
-
     </mat-expansion-panel>
   </mat-accordion>
 
-<hr>
+  <hr />
 
   <mat-accordion>
     <mat-expansion-panel hideToggle class="panel">
@@ -64,8 +63,9 @@
         <mat-panel-description>
           <p>
             Create a repeater component which repeats everything within the
-            enclosing tags as many times as there are elements in the input array. The
-            repeated template has access to the current object, exposed as “item”.            
+            enclosing tags as many times as there are elements in the input
+            array. The repeated template has access to the current object,
+            exposed as “item”.
           </p>
         </mat-panel-description>
       </mat-expansion-panel-header>
@@ -86,7 +86,22 @@
           <div>*</div>
         </ng-template>
       </app-repeat>
-      
     </mat-expansion-panel>
   </mat-accordion>
-</div>
+
+  <hr />
+
+  <mat-card class="card">
+    <mat-card-header class="card-header">
+      <mat-card-title 
+        >JavaScript - Create a function which creates a deep copy of an object
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        <code>var newObj = JSON.parse(JSON.stringify(obj));</code>
+      </p>
+    </mat-card-content>
+    <mat-card-actions> </mat-card-actions>
+  </mat-card>
+

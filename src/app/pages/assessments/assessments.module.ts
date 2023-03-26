@@ -8,6 +8,7 @@ import { SortPipe } from 'src/app/pipes/sort.pipe';
 import {MatDividerModule} from '@angular/material/divider';
 import { RepeatComponent } from 'src/app/components/repeat/repeat.component';
 import { RepeatDirective } from 'src/app/components/repeat/repeat.directive';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { RepeatDirective } from 'src/app/components/repeat/repeat.directive';
 
     MatExpansionModule,
     MatIconModule,
-    MatDividerModule
+    MatDividerModule,
+    MatCardModule
   ],
 })
 export class AssessmentsModule {}
