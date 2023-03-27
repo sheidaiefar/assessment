@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {OrderByModel} from "../../pipes/sort.pipe";
 
 @Component({
   selector: 'app-assessment',
