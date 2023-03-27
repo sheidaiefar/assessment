@@ -38,4 +38,5 @@ export class AssessmentsComponent {
     { name: 'B', job: 'E' },
     { name: 'C', job: 'E' },
   ];
+
 }
