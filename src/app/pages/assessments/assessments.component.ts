@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import {OrderByModel} from "../../pipes/sort.pipe";
 
 @Component({
   selector: 'app-assessment',
   templateUrl: './assessments.component.html',
-  styleUrls: ['./assessments.component.css']
+  styleUrls: ['./assessments.component.css'],
 })
 export class AssessmentsComponent {
-  panelOpenState = false
+  panelOpenState = false;
   movies = [
     {
       name: 'M',
@@ -28,15 +27,17 @@ export class AssessmentsComponent {
 
   names = ['maria', 'anna', 'sara'];
 
-  dates = [new Date(25, 5, 2022), new Date(29, 1, 2000), new Date(29, 12, 1900)];
+  dates = [
+    new Date(25, 5, 2022),
+    new Date(29, 1, 2000),
+    new Date(29, 12, 1900),
+  ];
 
   ages = [100, 20, 44, 88];
-
 
   data = [
     { name: 'A', job: 'D' },
     { name: 'B', job: 'E' },
     { name: 'C', job: 'E' },
   ];
-
 }
